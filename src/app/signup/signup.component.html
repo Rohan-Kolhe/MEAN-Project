@@ -1,0 +1,51 @@
+<div class="signup1">
+    <div class="container1">
+        <div class="container-fluid">
+            <div [formGroup]="fbFormGroup">
+                <div class="row" style="height: 100px;">
+                </div>
+
+                <div class="row justify-content-center" style="height: auto;">
+                    <div class="col-md-6  d-flex flex-column align-items-center">
+                        <h1 class="mb-1 mt-0 font-weight-light text-uppercase">Signup</h1>
+                        <div class="col d-flex justify-content-center mb-1">
+                            <div class="icons">
+                                <a href="https://en-gb.facebook.com/login/" class="social"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="https://accounts.google.com/servicelogin" class="social1"><i
+                                        class="fab fa-google-plus-g"></i></a>
+                            </div>
+                        </div>
+                        <input formControlName="username" type="text" class=" form-control rounded-pill form-control-lg"
+                            placeholder="Username" style="width: 340px;font-size: 15px;min-height: 22px; ">
+                        <input formControlName="firstname" type="text"
+                            class="mt-3 form-control rounded-pill form-control-lg" placeholder="First Name"
+                            style="width: 340px;font-size: 15px;min-height: 22px; ">
+                        <input formControlName="lastname" type="text"
+                            class="mt-3 form-control rounded-pill form-control-lg" placeholder="Last Name"
+                            style="width: 340px;font-size: 15px;min-height: 22px; ">
+                        <input formControlName="email" type="email"
+                            class="mt-3 form-control rounded-pill form-control-lg" placeholder="Email-Address"
+                            style="width: 340px;font-size: 15px;min-height: 22px">
+                        <input formControlName="password" type="password"
+                            class="mt-3 form-control rounded-pill form-control-lg" placeholder="Password"
+                            style="width: 340px;font-size: 15px;min-height: 22px">
+                        <!--<input formControlName="password" type="password" class="mt-3 form-control rounded-pill form-control-lg"
+                            placeholder="Confirm-Password" style="width: 340px;font-size: 15px;min-height: 22px">-->
+
+                    </div>
+                </div>
+
+                <div class="row  justify-content-center">
+                    <div class="col-md-6 d-flex flex-column align-items-center mb-4">
+                        <button [disabled]="!fbFormGroup.valid" (click)="registerHere()" id="button" type="submit"
+                            class="btn mt-3 rounded-pill btn-lg btn-custom btn-block  text-uppercase"
+                            style="font-size: 15px;min-height: 48px;background:#3010e6; width: 340px;color:#fff;font-weight: 600;">
+                            Agree & Join
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,114 @@
+<div class="container-fluid">
+    <div class="row mb-2 " style="background:rgb(40,60,74)">
+        <div class="col-md-2 pt-2 text-align:right">
+            <h3 style="font-weight: bold; color:white;">Linked<i class="fa fa-linkedin-square" aria-hidden="true"
+                    style="color: white;"></i>
+            </h3>
+        </div>
+        <div class="col-md-3 d-flex justify-content-start pt-2"><input type="text" placeholder="Search here"
+                class="form-control"></div>
+        <div class="col-md-7">
+            <div class="row justify-content-end">
+                <div (click)="gotoHome()" class="col-2 p-0 d-flex justify-content-end"><button class="btn "
+                        style="font-size: 10px; background:rgb(40,60,74);color:white"><i class="fa fa-home"
+                            aria-hidden="true" style="font-size: 1.5rem;color:white"></i><br> Home</button></div>
+                <div (click)="gotoJobs()" class="col-2 p-0 d-flex justify-content-end"><button class="btn "
+                        style="font-size: 10px;background:rgb(40,60,74);color:white"><i class="fa fa-suitcase"
+                            aria-hidden="true" style="font-size: 1.5rem;color:white"></i><br>Jobs</button></div>
+                <div class="col-2 p-0 d-flex justify-content-end"><button class="btn "
+                        style="font-size: 10px;background:rgb(40,60,74);color:white"><i class="fa fa-comments"
+                            aria-hidden="true" style="font-size: 1.5rem;color:white"></i><br>Message</button></div>
+                <div (click)="gotoprofile()" class="col-2 p-0 d-flex justify-content-end"><button class="btn "
+                        style="font-size: 10px;background:rgb(40,60,74);color:white"><i class="fa fa-user-circle"
+                            aria-hidden="true" style="font-size:1.5rem;color:white"></i><br>Me</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="row mt-3 justify-content-center" style="text-align: center;">
+            <div class="col-md-6 dflex justify-content-center">
+                <h3 style="font-weight:lighter">Your profile helps you discover the right people and opportunities</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row" [formGroup]="fbFormGroup">
+        <div class=" col-md-4">
+            <div class="row justify-content-center" style="height: auto;">
+                <div class="col-md-6  d-flex flex-column align-items-center">
+                    <input formControlName="SchoolorCollegeUniversity" type="text"
+                        class="form-control rounded-pill form-control-lg" placeholder="School or College/University"
+                        style="width: 340px;font-size: 15px;min-height: 48px; margin-bottom: 3vh;">
+
+                    <input formControlName="Degree" type="text" class="form-control rounded-pill form-control-lg"
+                        placeholder="Degree" style="width: 340px;font-size: 15px;min-height: 48px;margin-bottom: 3vh; ">
+
+                    <input formControlName="Specialization" type="text"
+                        class="form-control rounded-pill form-control-lg" placeholder="Specialization"
+                        style="width: 340px;font-size: 15px;min-height: 48px; margin-bottom: 3vh;">
+
+                    <input formControlName="startyear" type="text" class="form-control rounded-pill form-control-lg"
+                        placeholder="startyear"
+                        style="width: 340px;font-size: 15px;min-height: 48px; margin-bottom: 3vh;">
+
+                    <input formControlName="lastyear" type="text" class="form-control rounded-pill form-control-lg"
+                        placeholder="lastyear"
+                        style="width: 340px;font-size: 15px;min-height: 48px; margin-bottom: 3vh;">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div>
+                <div class="row justify-content-center" style="height: auto;">
+                    <div class="col-md-6  d-flex flex-column align-items-center">
+                        <input formControlName="recentjob" type="text" class="form-control rounded-pill form-control-lg"
+                            placeholder="Most recent job title"
+                            style="width: 340px;font-size: 15px;min-height: 48px; margin-bottom: 3vh;">
+
+                        <select id="cars" name="cars" class=" form-control mb-3 rounded-pill"
+                            style="width: 340px;font-size: 15px;min-height: 48px; margin-bottom: 3vh">
+                            <option value="Select One">Select One</option>
+                            <option value="Full Time">Full Time</option>
+                            <option value="Part Time">Part Time</option>
+                            <option value="Self-Employed">Self-Employed</option>
+                            <option value="Freelance">Freelance</option>
+                            <option value="Internship">Internship</option>
+                            <option value="Trainee">Trainee</option>
+                        </select>
+
+                        <input formControlName="recentcompany" type="text"
+                            class="form-control rounded-pill form-control-lg" placeholder="Most recent company"
+                            style="width: 340px;font-size: 15px;min-height: 48px; margin-bottom: 3vh;">
+
+                        <input formControlName="jstartyear" type="text"
+                            class="form-control rounded-pill form-control-lg" placeholder="startyear"
+                            style="width: 340px;font-size: 15px;min-height: 48px; margin-bottom: 3vh;">
+
+                        <input formControlName="jlastyear" type="text" class="form-control rounded-pill form-control-lg"
+                            placeholder="lastyear"
+                            style="width: 340px;font-size: 15px;min-height: 48px; margin-bottom: 3vh;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div>
+                <input formControlName="country" type="text" class="form-control rounded-pill form-control-lg"
+                    placeholder="country" style="width: 340px;font-size: 15px;min-height: 48px; margin-bottom: 3vh;">
+
+                <input formControlName="CityDistrict" type="text" class="form-control rounded-pill form-control-lg"
+                    placeholder="City/District"
+                    style="width: 340px;font-size: 15px;min-height: 48px; margin-bottom: 3vh;">
+
+                <input formControlName="username" type="text" class="form-control rounded-pill form-control-lg"
+                    placeholder="Username" style="width: 340px;font-size: 15px;min-height: 48px; margin-bottom: 3vh;">
+
+                <button [disabled]="!fbFormGroup.valid" (click)="registerHere()" id="button" type="submit"
+                    class="btn rounded-pill btn-lg btn-custom btn-block text-uppercase"
+                    style="font-size: 15px;min-height: 48px; width: 340px;background: #3010e6;color:#fff;font-weight: 600;">Submit</button>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,65 @@
+<div class="container-fluid">
+    <div class="row fixed-top" style="padding-left: 25px;padding-right: 15px; background: white;">
+        <div class="col-6 d-flex align-items-center text-white font-weight-bold">
+            <a routerLink="/" routerLinkActive="active" class="h3"
+                style="font-weight: bold;margin-right: 2px;color: #0f6586;">Linked</a>
+
+            <img src="https://image.flaticon.com/icons/png/512/174/174857.png" alt=""
+                style="height: 5vh;width: 5vh;margin-bottom: 10px;">
+        </div>
+
+        <div class="col-6 d-flex justify-content-end align-items-center font-weight-bold"
+            style="height: 60px;font-family: monospace;">
+            <button routerLink="/signup" id="joinNow" onmouseover="hower1()" onmouseout="hower2()"
+                style="border: 0px;background: white;font-family:'sans-serif';font-weight: bold;color: grey;border-radius:5px ;">
+                Join
+                now</button>
+        </div>
+    </div>
+
+    <div class="row" style="height: 100vh;">
+        <div class="col-md-6 mt-5">
+            <p style="font-size: 10vh;color: #0084ff;">
+                Welcome to your professional community
+            </p>
+            <img src="https://elicoassets.com/wp-content/uploads/2019/12/dev-illustration.png" alt=""
+                style="height: 50vh;width   : 54vh;">
+        </div>
+
+        <div class="col-md-6 ">
+            <div [formGroup]="fbFormGroup">
+                <div class="row" style="height: 100px;">
+                </div>
+                <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+                    A simple danger alert—check it out!
+                </div>
+                <div class="row justify-content-center" style="height: auto;">
+                    <div class="col-md-6  d-flex flex-column align-items-center">
+                        <h1 class="mb-5 font-weight-light text-uppercase">Login</h1>
+                        <input formControlName="username" type="text" class="form-control rounded-pill form-control-lg"
+                            placeholder="Username" style="width: 340px;font-size: 15px;min-height: 48px; ">
+                        <input id="password" type="password" class="mt-4 form-control rounded-pill form-control-lg"
+                            formControlName="password" style="width: 340px;font-size: 15px;min-height: 48px">
+                        <div class="row justify-content-between mt-2" style="font-size:13px">
+                            <input type="checkbox" class="form-check-input" id="remember">
+                            <label class="form-check-label" for="remember">Remember Password </label>
+                            <a routerLink="/forgot-password" routerLinkActive="active" style="margin-left:80px ;">Forgot
+                                Password?</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row  justify-content-center">
+                    <div class="col-md-6 d-flex flex-column align-items-center">
+                        <button [disabled]="!fbFormGroup.valid" (click)="loginProcessHere()" onmouseover="over()"
+                            onmouseout="out()" id="button" type="submit"
+                            class="btn mt-5 rounded-pill btn-lg btn-custom btn-block text-uppercase"
+                            style="font-size: 15px;min-height: 48px; width: 340px;background: #3010e6;color:#fff;font-weight: 600;">Log
+                            in</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

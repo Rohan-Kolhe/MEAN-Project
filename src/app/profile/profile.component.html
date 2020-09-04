@@ -1,0 +1,163 @@
+<div class="container-fluid">
+    <div class="row mb-2 " style="background:rgb(40,60,74)">
+        <div class="col-md-2 pt-2 text-align:right">
+            <h3 style="font-weight: bold; color:white;">Linked<i class="fa fa-linkedin-square" aria-hidden="true"
+                    style="color: white;"></i>
+            </h3>
+        </div>
+        <div class="col-md-3 d-flex justify-content-start pt-2"><input type="text" placeholder="Search here"
+                class="form-control"></div>
+        <div class="col-md-7">
+            <div class="row justify-content-end">
+                <div (click)="gotoHome()" class="col-2 p-0 d-flex justify-content-end"><button class="btn "
+                        style="font-size: 10px; background:rgb(40,60,74);color:white"><i class="fa fa-home"
+                            aria-hidden="true" style="font-size: 1.5rem;color:white"></i><br> Home</button></div>
+                <div (click)="gotoJobs()" class="col-2 p-0 d-flex justify-content-end"><button class="btn "
+                        style="font-size: 10px;background:rgb(40,60,74);color:white"><i class="fa fa-suitcase"
+                            aria-hidden="true" style="font-size: 1.5rem;color:white"></i><br>Jobs</button></div>
+                <div class="col-2 p-0 d-flex justify-content-end"><button class="btn "
+                        style="font-size: 10px;background:rgb(40,60,74);color:white"><i class="fa fa-comments"
+                            aria-hidden="true" style="font-size: 1.5rem;color:white"></i><br>Message</button></div>
+                <div class="col-2 p-0 d-flex justify-content-end"><button class="btn "
+                        style="font-size: 10px;background:rgb(40,60,74);color:white"><i class="fa fa-user-circle"
+                            aria-hidden="true" style="font-size:1.5rem;color:white"></i><br>Me</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="row justify-content-center " style="height:35vh; ">
+            <div class="col-md-8 d-flex justify-content-center d-flex">
+                <div class="profile-image">
+                    <div class="row" style="width: 35vh;">
+                        <img src="assets/imag/1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8 d-flex mt-5">
+                <div class="col-9" *ngFor="let data of userdata">
+                    <div class="row">
+                        <h4> {{data.name}}</h4>
+                    </div>
+                    <div class="row">
+                        <div> <b> Latest Qualification/ Recent Job::</b></div>
+                        <div>PG-Diploma</div>
+                    </div>
+                    <div class="row">
+                        <b> Location::</b>
+                        <div>{{data.location}}</div>
+                    </div>
+                    <div class="row">
+                        <div> <b> connection count::</b></div>
+                        <div>66558</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 d-flex mt-5">
+            <div class="col-md-9">
+                <div class="row">
+                    <div style="font-weight:lighter">
+                        <h5> <b> Experience </b></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div> <b> Job profile::</b></div>
+                    <div>Java Developer</div>
+                </div>
+                <div class="row">
+                    <div> <b> Organization::</b></div>
+                    <div>CDAC</div>
+                </div>
+                <div class="row">
+                    <div> <b> joining date::</b></div>
+                    <div>2015</div>
+                </div>
+
+                <div class="row">
+                    <div> <b>location:: </b></div>
+                    <div>Mumbai</div>
+                </div>
+                <div class="row">
+                    <div> <b> Describe :: </b></div>
+                </div>
+
+            </div>
+            <div class="col-3 d-flex justify-content-end">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center ">
+        <div class="col-md-8 d-flex mt-5">
+            <div class="col-9">
+                <div class="row">
+                    <div style="font-weight:lighter">
+                        <h5> <b> Education </b></h5>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div> <b> College name::</b></div>
+                    <div>NDMVP KBTCOE,Nashik</div>
+                </div>
+                <div class="row">
+                    <div> <b> Degree:: </b></div>
+                    <div>Mechanical Engineering</div>
+                </div>
+                <div class="row">
+                    <div> <b> Start & end duration::</b></div>
+                    <div>2014-18</div>
+                </div>
+            </div>
+            <div class="col-3 d-flex justify-content-end">
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 d-flex mt-5">
+            <div class="col-md-9">
+                <div class="row">
+                    <div style="font-weight:lighter">
+                        <h5> <b> Skills & Endrosment</b></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div> <b> Sample skill count::</b></div>
+                    <div>5</div>
+                </div>
+            </div>
+            <div class="col-3 d-flex justify-content-end">
+                <div><button class="btn btn-block  btn-primary">Add new skill</button></div>
+                <div class="icon"><i class="fas fa-pen"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center">
+        <div class="col-md-8 d-flex mt-5">
+            <div class="col-md-9 ">
+                <div class="row">
+                    <div style="font-weight:lighter">
+                        <h5> <b> Accomplishment</b></h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>Project/Publication/Course/Project/Honor & Award/ Test Score/Language</div>
+                </div>
+            </div>
+            <div class="col-3 d-flex justify-content-end">
+                <div class="icon"><i class="fas fa-plus"></i></div>
+            </div>
+        </div>
+    </div>
+
+</div>
